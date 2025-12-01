@@ -307,7 +307,7 @@ namespace ElevenLabs.TextToSpeech
 
             if (DisableRetention.HasValue)
             {
-                parameters.Add(EnableLoggingParameter, DisableRetention.GetValueOrDefault() ? "false" : "true");
+                parameters.Add(EnableLoggingParameter, DisableRetention.GetValueOrDefault().ToString().ToLower());
             }
 
             return parameters;
